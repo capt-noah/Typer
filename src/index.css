@@ -1,1 +1,27 @@
-@import "tailwindcss"
+@font-face {
+    font-family: 'Baloo';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../src/assets/fonts/baloo/Baloo2-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Baloo';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../src/assets/fonts/baloo/Baloo2-Bold.ttf');
+}
+
+@font-face{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../src/assets/fonts/roboto/Roboto-Regular.ttf')
+}
+
+@import "tailwindcss";
+
+@theme{
+    --font-baloo: Baloo, "sans-serif";
+    --font-roboto: Roboto, "sans-serif"
+}
