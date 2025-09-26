@@ -3,6 +3,8 @@ import Logic from './components/logic.jsx'
 import Navbar from './components/navbar.jsx'
 import Controls from "./components/controls.jsx"
 import Stats from "./components/stats.jsx"
+import BookMode from "./components/bookMode.jsx"
+import Book from "./components/bookDetail.jsx"
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
   const [timer, setTimer] = useState(60)
   const [reset, setReset] = useState(false)
 
+  const [nav, setNav] = useState("Book")
+
 
 
 
@@ -23,7 +27,7 @@ function App() {
 
     <div className=" w-full h-full ">
 
-      <Navbar />
+      <Navbar nav={nav} setNav={setNav} />
 
       <Controls timer={timer} setTimer={setTimer} />
       
@@ -33,6 +37,11 @@ function App() {
  
         
       <Stats timer={timer} wpm={wpm} acc={acc} setReset={setReset} />
+
+      <BookMode />
+
+      <Book />
+
 
       
 
